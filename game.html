@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>game</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"> 
+ <style>
+ 	body
+ 	{
+ 		background-image:url(back.jpg);
+ 		background-size: cover;
+ 		width:100%;
+ 	}
+ 	.jumbotron
+ 	{
+ 		width:100%;
+ 		height:auto;
+ 		padding-top: 0px;
+ 		height: 100vh;
+ 		background-color: rgba(0,0,0,.4);
+ 		padding-left: 0px;
+ 		padding-right: 0px;
+ 		
+ 	}
+ 	.contain
+ 	{
+ 		position: absolute;
+ 		padding-top: 250px;
+ 		padding-bottom: 250px;
+ 		
+ 	}
+ 	.container
+ 	{
+ 		 
+ 		 display: none;	}
+ 	.text-center
+ 	{
+ 		font-size: 80px;
+ 		color:white;
+ 		font-family: 'Anton', sans-serif;
+ 		
+ 	}
+ 	.mouse
+ 	{
+ 		visibility: hidden;
+ 	}
+ 	.col
+ 	{
+ 		width:100px;
+ 		
+ 	}
+ 	.text-right
+ 	{
+ 		color: white;
+ 		font-size: 30px;
+ 	}
+ 	.button
+	{
+		margin-left: 225%;
+		margin-top: 10%;
+		font-size: 40px;
+		padding: 10px 10px;
+		width:250px;
+		background-color: transparent;
+		border: 1px solid white;
+		border-radius: 10px;
+		color:white;
+
+	}
+	.button:hover
+	{
+		background-color: rgba(0,0,0,.5);
+	}
+	
+	td
+	{
+		
+	}
+	
+
+ </style>
+</head>
+<body onload="display()">
+<div class="jumbotron">
+		<div class="contain">
+			<center><table >
+				<tr><td><input type="submit" value="Play" class="button" onclick="play()"></td></tr>
+
+				<tr><td><input type="button" value="High Score" class="button"></td></tr>
+			</table></center>
+		</div>
+
+	  <div class="container">
+		<div class="text-center">Game</div>
+		<div class="text-right">Score</div>
+		<p id="score" class="text-right">0</p>
+		<div class="row r1 p-3">
+			<div class="col text-center">
+				
+			</div>
+			<div class="col text-center">
+				
+			</div>
+			<div class="col text-center">
+				
+			</div>
+		
+			<div class="col text-center">
+				
+			</div>
+			<div class="col text-center">
+				
+			</div>
+			<div class="col text-center">
+				
+			</div>
+		</div>
+	  </div>
+	</div>
+
+	<script>
+	function play()
+	{
+		document.querySelector(".contain").style.display='none';
+		document.querySelector(".container").style.display='block';
+		//document.getElementById('c').style.display='block	';	
+	}
+		// setTimeout(() => {document.querySelector(".mouse").style.visibility='visible'},1000);
+		// setTimeout(() => {document.querySelector(".mouse").style.visibility='hidden'},2000);
+i=0;
+function display()
+{
+	
+let random1=getRandomInt(5);
+console.log(random1);
+let img1=document.createElement('img');
+img1.src="mouse.gif";
+img1.alt="rat";
+//img1.onclick="score()";
+img1.addEventListener('click',function(){
+i++;
+document.cookie=i;
+document.getElementById('score').innerHTML=i;
+});
+document.querySelectorAll('.col')[random1].appendChild(img1);
+setTimeout(function(){
+document.querySelectorAll('.col')[random1].removeChild(img1);
+display();
+}, 1000);
+}		
+	function getRandomInt(max) {
+return Math.floor(Math.random() * Math.floor(max));
+}
+
+
+
+	</script>
+</body>
+</html>
