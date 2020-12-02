@@ -1,0 +1,104 @@
+	body
+ 	{
+ 		background-image:url(back.jpg);
+ 		background-size: 100% 100%;
+ 		background-repeat: no-repeat;
+ 		height: 100vh;
+ 	}
+ 	.jumbotron
+ 	{
+ 		width:100%;
+ 		height:auto;
+ 		padding-top: 0px;
+ 		background-size: 100% 100%;
+ 		height:100vh;
+ 		background-color: rgba(0,0,0,.4);
+ 		padding-left: 0px;
+ 		padding-right: 0px;
+ 		
+ 	}
+ 	.contain
+ 	{
+ 		position: absolute;
+ 		padding-top: 15%;
+ 		padding-left: 15%;
+ 		padding-right: 10%;
+ 		
+ 	}
+ 	.container
+ 	{
+ 		 
+ 		 display: none;	}
+ 	.text-center
+ 	{
+ 		font-size: 80px;
+ 		color:white;
+ 		font-family: 'Anton', sans-serif;
+ 		
+ 	}
+ 	.mouse
+ 	{
+ 		visibility: hidden;
+ 	}
+ 	.col
+ 	{
+ 		width:100px;
+ 		border-color: 1px solid red;
+ 		
+ 	}
+ 	.text-right
+ 	{
+ 		color: white;
+ 		font-size: 30px;
+ 	}
+ 	.button
+	{
+		
+		margin-top: 10%;
+		font-size: 40px;
+		padding: 10px 10px;
+		width:250px;
+		background-color: transparent;
+		border: 1px solid white;
+		border-radius: 10px;
+		color:white;
+
+	}
+	.button:hover
+	{
+		background-color: rgba(0,0,0,.5);
+	}
+	.mouse1{
+		background-image: 100% 100%;
+
+	}
+	
+	.text-left
+	{
+		color: white;
+ 		font-size: 30px;
+ 		margin-top: -10%;
+	}
+	@media screen and (min-width: 992px) {
+  body {
+    color:yellow;
+  }
+  .contain
+  {
+  		position: absolute;
+ 		padding-top: 15%;
+ 		padding-left: 40%;
+ 		
+  }
+}
+.row1
+{
+margin-top: 10%;
+margin-bottom: 10%;
+border-color: 2px solid white;
+}
+.row
+{
+margin-top: 10%;
+margin-bottom: 10%;
+}
