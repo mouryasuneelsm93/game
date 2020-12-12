@@ -41,7 +41,7 @@ img1.addEventListener('click',function(){
 i++;
 if(i>b)
 {
-	alert("you break the high score");
+	
 document.cookie="name="+i;	
 document.getElementById('hscore').innerHTML=b;
 }
